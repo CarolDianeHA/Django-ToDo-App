@@ -1,0 +1,135 @@
+{% extends "todo/layout.html" %}
+
+{% block body %}
+<script>
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length == 2) return parts.pop().split(';').shift();
+    }
+
+    function submitHandler(id) {
+        const textareaValue = document.getElementById(`textarea_${id}`).value;
+        const content = document.getElementById(`content_${id}`);
+        const modal = document.getElementById(`modal_edit_task_${id}`);
+        console.log("Submitting form for task ID:", id);
+        console.log("Textarea value:", textareaValue);
+        fetch(`/edit/${id}/`, { // Add trailing slash here
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "X-CSRFToken": getCookie("csrftoken")
+            },
+            body: JSON.stringify({ content: textareaValue })
+        })
+        .then(response => {
+            console.log("Response status:", response.status);
+            return response.json();
+        })
+        .then(result => {
+            console.log("Result from server:", result);
+            content.innerHTML = result.data;
+            // Hide the modal using Bootstrap's method
+            $(`#modal_edit_task_${id}`).modal('hide');
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+<div class="card text-center mb-4">
+    <div class="card-body">
+        <h2 class="card-title">Pending Tasks</h2>
+    </div>
+</div>
+
+<form method="POST" class="row g-3 justify-content-center align-items-center mb-4 pb-2">
+    {% csrf_token %}
+    <div class="col-lg-8">
+        <div class="form-outline">
+            <input type="text" id="form1" class="form-control" name="task" placeholder="Enter a task here"/>
+        </div>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </div>
+</form>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table mb-4">
+            <thead>
+                <tr>
+                    <th scope="col">Todo item</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasksOfThePage %}
+                <tr>
+                    <td id="content_{{ task.id }}">{{ task.task_name }}</td>
+                    <td>In progress</td>
+                    <td>
+                        <div class="d-flex flex-column flex-md-row">
+                            <button class="btn btn-warning btn-sm mb-2 mb-md-0 mr-md-2" data-toggle="modal" data-target="#modal_edit_task_{{ task.id }}">Edit</button>
+                            <a href="{% url 'update' task.id %}">
+                                <button type="submit" class="btn btn-success btn-sm mb-2 mb-md-0 mr-md-2">Finished</button>
+                            </a>
+                            <a href="{% url 'delete' task.id %}">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Modal for editing task -->
+                <div class="modal fade" id="modal_edit_task_{{ task.id }}" tabindex="-1" role="dialog" aria-labelledby="modal_edit_task_{{ task.id }}_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Task</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <textarea name="content" id="textarea_{{ task.id }}" rows="5" class="form-control">{{ task.task_name }}</textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="submitHandler({{ task.id }})">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- Pagination controls -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination d-flex justify-content-center">
+                {% if tasksOfThePage.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ tasksOfThePage.previous_page_number }}">Previous</a>
+                </li>
+                {% endif %}
+                {% for num in tasksOfThePage.paginator.page_range %}
+                {% if tasksOfThePage.number == num %}
+                <li class="page-item active">
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+                {% elif num > tasksOfThePage.number|add:'-3' and num < tasksOfThePage.number|add:'3' %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% if tasksOfThePage.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ tasksOfThePage.next_page_number }}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
