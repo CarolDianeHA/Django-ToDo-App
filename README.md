@@ -43,7 +43,7 @@ I believe my project meets the distinctiveness and complexity requirements becau
 * A mail application
 * A network application similar to Twitter, where users can create, like, and edit posts, as well as follow and unfollow others
 
-In contrast, my project offers a unique centralized platform for task management, which is not covered by any of the aforementioned projects. Regarding complexity, my project leverages Django for the backend and HTML, CSS, JavaScript for the frontend. Additionally, it is mobile responsive, as demonstrated in the demo video.
+In contrast, my project offers a unique centralized platform for task management, which is not covered by any of the aforementioned projects. Regarding complexity, my project leverages Django for the backend and HTML, CSS, JavaScript for the frontend. Additionally, it is mobile responsive.
 
 ## Technical Details
 
