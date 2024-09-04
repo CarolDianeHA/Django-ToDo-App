@@ -107,19 +107,19 @@ todo
 ```
 
 * Files modified in this folder and what they contain:
-    * Migration Folder: Contains all migrations created whenever changes are made to our models or database.
+    * Migration Folder: Contains all migrations created whenever changes are made to the models or database.
     * Static Folder:
         * images: Contains images used in the README file, including screenshots and the site favicon.
         * todo: Contains the CSS file with the application styles.
     * templates/todo:
         * `completed_tasks.html`: Contains the list of completed tasks and allows you to delete or mark tasks as incomplete.
-        * `layout.html`: Contains the application layout and navigator.
-        * `login.html`: Contains the login functionality.
-        * `register.html`: Contains the user registration functionality.
-        * `todo.html`: Contains the tasks view, create and manage pending tasks.
-    * `admin.py`: Contains the admin models.
-    * `models.py`: Contains the application models.
-    * `urls.py`: Contains all the urls created for the todo app.
+        * `layout.html`: Defines the application layout and navigation.
+        * `login.html`: Manages the login functionality.
+        * `register.html`: Manages the user registration functionality.
+        * `todo.html`: Displays and manages pending tasks.
+    * `admin.py`: Defines the admin models.
+    * `models.py`: Defines the application models.
+    * `urls.py`: Lists all the URLs created for the todo app.
     * `views.py`: Contains all the application functions. 
 
 
