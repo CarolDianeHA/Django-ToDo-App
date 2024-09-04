@@ -4,7 +4,7 @@
 
 This is the final project for the course CS50’s Web Programming with Python and JavaScript. It is built using Django, HTML, CSS, JavaScript, Python, and Bootstrap.
 
-The main concept of the application is to allow users to create a list of pending and completed tasks. Users have the option to edit, delete, and mark tasks as completed or incomplete. After registering and logging into the application, users have the opportunity to manage their tasks efficiently.
+The main concept of the application is to allow users to create a list of pending and completed tasks. Users have the option to create, edit, delete, and mark tasks as completed or incomplete. After registering and logging into the application, users have the opportunity to manage their tasks efficiently.
 
 This web application offers the following features:
 
@@ -60,6 +60,86 @@ or
 ```
 python3 manage.py runserver
 ```
+
+## File Structure
+
+The main folder called CarolDianeHA contains 2 folders :
+
+* The first folder is our app called todo:
+
+```
+todo
+┣ 📂__pycache__
+┃ 
+┣ 📂migrations
+┃ 
+┣ 📂static
+┃ ┣ 📂images
+┃ ┃ ┣ 📜00Web-LoginPage.png
+┃ ┃ ┣ 📜01Web-RegisterPage.png
+┃ ┃ ┣ 📜02Web-Pending TasksPage.png
+┃ ┃ ┣ 📜03Web-CompletedTasksPage.png
+┃ ┃ ┣ 📜04Mobile-LoginPage.png
+┃ ┃ ┣ 📜05Mobile-RegisterPage.png
+┃ ┃ ┣ 📜06Mobile-PendingTasksPage.png
+┃ ┃ ┣ 📜07Mobile-CompletedTasksPage.png
+┃ ┃ ┗ 📜favicon.ico
+┃ ┣ 📂todo
+┃ ┃ ┣ 📜.DS_Store
+┃ ┃ ┗ 📜styles.css
+┃ ┗ 📜.DS_Store
+┣ 📂templates
+┃ ┗ 📂todo
+┃   ┣ 📜completed_tasks.html
+┃   ┣ 📜layout.html
+┃   ┣ 📜login.html
+┃   ┣ 📜register.html
+┃   ┗ 📜todo.html
+┣ 📜__init__.py
+┣ 📜.DS_Store
+┣ 📜admin.py
+┣ 📜apps.py
+┣ 📜models.py
+┣ 📜tests.py
+┣ 📜urls.py
+┗ 📜views.py
+
+```
+
+* Files modified in this folder and what they contain:
+    * Migration Folder: Contains all migrations created whenever changes are made to our models or database.
+    * Static Folder:
+        * images: Contains images used in the README file, including screenshots and the site favicon.
+        * todo: Contains the CSS file with the application styles.
+    * templates/todo:
+        * `completed_tasks.html`: Contains the list of completed tasks and allows you to delete or mark tasks as incomplete.
+        * `layout.html`: Contains the application layout and navigator.
+        * `login.html`: Contains the login functionality.
+        * `register.html`: Contains the user registration functionality.
+        * `todo.html`: Contains the tasks view, create and manage pending tasks.
+    * `admin.py`: Contains the admin models.
+    * `models.py`: Contains the application models.
+    * `urls.py`: Contains all the urls created for the todo app.
+    * `views.py`: Contains all the application functions. 
+
+
+* The second folder contains the django project calls tools that contains:
+
+```
+tools
+┣ 📂__pycache__
+┃ 
+┣ 📜__init__.py
+┣ 📜.DS_Store
+┣ 📜asgi.py
+┣ 📜settings.py
+┣ 📜urls.py
+┗ 📜wsgi.py
+
+```
+Files modified in this folder and their contents:
+* `settings.py`: Contains all the settings for our Django project, including installed apps and custom configurations.
+* `urls.py`: Defines all the paths for our app, including the admin panel and the `ToDo` app.
 
 ## Application Screenshots
 
