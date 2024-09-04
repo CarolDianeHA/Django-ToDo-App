@@ -69,25 +69,25 @@ python3 manage.py runserver
 
 Users have the opportunity to log in to the application using their username and password.
 
-![Login Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/00Web-LoginPage.png)
+![Login Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/00Web-LoginPage.png)
 
 * Register Page
 
 Users can register for the application by providing a username, email address, and setting up a password.
 
-![Register Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/01Web-RegisterPage.png)
+![Register Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/01Web-RegisterPage.png)
 
 * Tasks Page
 
 On the tasks page, users can create new tasks, view all their pending tasks, as well as edit, delete, and mark them as completed.
 
-![Tasks Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/02Web-Pending%20TasksPage.png)
+![Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/02Web-Pending%20TasksPage.png)
 
 * Completed Tasks Page
 
 On the completed tasks page, users can view all their completed tasks. They can also mark tasks as incomplete or delete them.
 
-![Completed Tasks Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/03Web-CompletedTasksPage.png)
+![Completed Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/03Web-CompletedTasksPage.png)
 
 ### Mobile Application Pages
 
@@ -95,19 +95,19 @@ In the mobile version, users have the same functionalities as in the web version
 
 * Loging Page
 
-![Login Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/04Mobile-LoginPage.png)
+![Login Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/04Mobile-LoginPage.png)
 
 * Register Page
 
-![Register Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/05Mobile-RegisterPage.png)
+![Register Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/05Mobile-RegisterPage.png)
 
 * Tasks Page
 
-![Tasks Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/06Mobile-PendingTasksPage.png)
+![Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/06Mobile-PendingTasksPage.png)
 
 * Completed Tasks Page
 
-![Completed Tasks Page](https://github.com/me50/CarolDianeHA/blob/web50/projects/2020/x/capstone/todo/static/images/07Mobile-CompletedTasksPage.png)
+![Completed Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/07Mobile-CompletedTasksPage.png)
 
 ## Application Demo Video
 
