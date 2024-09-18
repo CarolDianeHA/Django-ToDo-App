@@ -1,5 +1,8 @@
 # ToDo Application
 
+## Description
+
+This is the final project for the course CS50’s Web Programming with Python and JavaScript. It is built using Django, HTML, CSS, JavaScript, Python, and Bootstrap.
 
 ## Overview
 
