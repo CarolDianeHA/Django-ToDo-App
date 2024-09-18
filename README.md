@@ -149,15 +149,21 @@ On the completed tasks page, users can view all their completed tasks. They can 
 
 In the mobile version, users have the same functionalities as in the web version. The only difference is the appearance of the navigation bar.
 
-| Loging Page | Register Page |
-|:-----------:|:-------------:|
+| Loging Page |
+|:-----------:|
 |![Login Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/04Mobile-LoginPage.png)|
-![Register Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/05Mobile-RegisterPage.png)|
 
-| Tasks Page | Completed Tasks Page |
-|:----------:|:--------------------:|
+| Register Page |
+|:-------------:|
+|![Register Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/05Mobile-RegisterPage.png)|
+
+| Tasks Page |
+|:----------:|
 |![Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/06Mobile-PendingTasksPage.png)|
-![Completed Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/07Mobile-CompletedTasksPage.png)|
+
+| Completed Tasks Page |
+|:--------------------:|
+|![Completed Tasks Page](https://github.com/CarolDianeHA/Django-ToDo-App/blob/main/todo/static/images/07Mobile-CompletedTasksPage.png)|
 
 ## Application Demo Video
 
