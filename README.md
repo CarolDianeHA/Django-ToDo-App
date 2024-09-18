@@ -1,12 +1,23 @@
-# Capstone Project - ToDo
+# ToDo Application
 
-## Description
 
-This is the final project for the course CS50’s Web Programming with Python and JavaScript. It is built using Django, HTML, CSS, JavaScript, Python, and Bootstrap.
+## Overview
 
-The main concept of the application is to allow users to create a list of pending and completed tasks. Users have the option to create, edit, delete, and mark tasks as completed or incomplete. After registering and logging into the application, users have the opportunity to manage their tasks efficiently.
+ToDo Application is a Django-based web application designed to help users manage their tasks efficiently. It provides features for creating, updating, and deleting tasks, as well as tracking task completion.
 
-This web application offers the following features:
+## Distinctiveness and Complexity
+
+I believe my project meets the distinctiveness and complexity requirements because it is fundamentally different from the other course projects. Throughout the course, we developed:
+
+* A Google search clone
+* A Wikipedia-like project that allows users to create and edit articles using a markdown system
+* A bid auction website
+* A mail application
+* A network application similar to Twitter, where users can create, like, and edit posts, as well as follow and unfollow others
+
+In contrast, this project stands out due to its comprehensive task management features, including user authentication, task categorization, and a responsive design. The complexity is evident in the integration of Django’s authentication system, and the use of class-based views.
+
+## Features
 
 **Navigation Bar Options:**
 
@@ -33,39 +44,24 @@ This web application is mobile responsive, ensuring a seamless experience on var
 
 The primary objective of developing this application is to create a comprehensive and centralized platform for task management. By consolidating all pending tasks in one place, the application aims to enhance users’ organizational skills and boost their overall efficiency. Users can easily add, edit, delete, and mark tasks as completed or incomplete, ensuring they stay on top of their responsibilities. Additionally, the application supports user registration and login, providing a personalized and secure experience for each user.
 
-## Distinctiveness and Complexity
 
-I believe my project meets the distinctiveness and complexity requirements because it is fundamentally different from the other course projects. Throughout the course, we developed:
+## Code overview
+The project was developed using Python and the Django framework, leveraging SQLite as the database. The front-end was crafted with HTML, enhanced by Bootstrap and CSS for styling. JavaScript was employed to enable the functionality for editing tasks.
 
-* A Google search clone
-* A Wikipedia-like project that allows users to create and edit articles using a markdown system
-* A bid auction website
-* A mail application
-* A network application similar to Twitter, where users can create, like, and edit posts, as well as follow and unfollow others
+## File Contributions
 
-In contrast, my project offers a unique centralized platform for task management, which is not covered by any of the aforementioned projects. Regarding complexity, my project leverages Django for the backend and HTML, CSS, JavaScript for the frontend. Additionally, it is mobile responsive.
+|File|Content|
+|:---|:------|
+|`settings.py`|Contribute project settings, include database setup and installed apps.|
+|`urls.py`|Defines the URL patterns for the application.|
+|`views.py`|Implemented class-based views for handling task operations.|
+|`models.py`|Created models for tasks and categories.|
+|`templates/`|Designed HTML templates for the different pages.|
+|`static/`|Added CSS file for styling and interactivity.|
 
-## Technical Details
+## Application File Structure
 
-This web application was developed using the following technology:
-
-* `Django version 5.0.3`
-* Backend: `Python`, `SQLite`
-* Front End: `HTML`, `CSS`, `JavaScript`
-* Tu run the project, locate in the root folder and use the following command:
-```
-python manage.py runserver
-```
-or
-```
-python3 manage.py runserver
-```
-
-## File Structure
-
-The main folder called CarolDianeHA contains 2 folders :
-
-* The first folder is our app called todo:
+The VSCode File Tree Generator shows the following file structure:
 
 ```
 todo
@@ -106,24 +102,7 @@ todo
 
 ```
 
-* Files modified in this folder and what they contain:
-    * Migration Folder: Contains all migrations created whenever changes are made to the models or database.
-    * Static Folder:
-        * images: Contains images used in the README file, including screenshots and the site favicon.
-        * todo: Contains the CSS file with the application styles.
-    * templates/todo:
-        * `completed_tasks.html`: Contains the list of completed tasks and allows you to delete or mark tasks as incomplete.
-        * `layout.html`: Defines the application layout and navigation.
-        * `login.html`: Manages the login functionality.
-        * `register.html`: Manages the user registration functionality.
-        * `todo.html`: Displays and manages pending tasks.
-    * `admin.py`: Defines the admin models.
-    * `models.py`: Defines the application models.
-    * `urls.py`: Lists all the URLs created for the todo app.
-    * `views.py`: Contains all the application functions. 
-
-
-* The second folder contains the django project calls tools that contains:
+## Project File Structure
 
 ```
 tools
@@ -137,9 +116,6 @@ tools
 ┗ 📜wsgi.py
 
 ```
-Files modified in this folder and their contents:
-* `settings.py`: Contains all the settings for our Django project, including installed apps and custom configurations.
-* `urls.py`: Defines all the paths for our app, including the admin panel and the `ToDo` app.
 
 ## Application Screenshots
 
@@ -192,6 +168,80 @@ In the mobile version, users have the same functionalities as in the web version
 ## Application Demo Video
 
 [Visit YouTube Link here!!](https://youtu.be/aTuUTbH0rmM)
+
+## Installation
+
+1. Clone the repository:
+```
+git clone git@github.com:CarolDianeHA/Django-ToDo-App.git
+```
+2. Recommended: Create a virtual environment, for more information use this [link](https://www.w3schools.com/django/django_create_virtual_environment.php)
+
+Windows:
+```
+py -m venv env
+```
+
+Unix/MacOS:
+```
+python3 -m venv env
+```
+This will set up a virtual environment, and create a folder named "env" with subfolders and files, like this: 
+```
+env
+  bin(linux/MacOS)
+  include
+  lib
+  script(Windows)
+  pyvenv.cfg
+```
+
+* Activate the environment:
+
+Windows:
+```
+env\Script\activate.bat
+```
+Linux/MacOS:
+```
+source env/bin/activate
+```
+Once the environment is actived, you will see this result in the command prompt:
+
+Windows:
+`(env) C:\Users\Your Name>`
+
+Linux/MacOS:
+`(env) ... $`
+
+3. Install dependencies:
+```
+pip install -r requirements.txt
+```
+If you make changes to the project, you can always update the requirements with this command:
+```
+pip freeze > requirements.txt
+```
+
+4. Run the migration
+```
+python manage.py makemigrations
+```
+
+5. Run the migrate
+```
+python manage.py migrate
+```
+
+6. Create the Super User
+```
+python manage.py createsuperuser
+```
+
+7. Run the server
+```
+python manage.py runserver
+```
 
 ## Authors
 

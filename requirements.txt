@@ -1,0 +1,7 @@
+asgiref==3.8.1
+Django==5.0.3
+markdown2==2.4.13
+pytz==2024.1
+setuptools==71.1.0
+sqlparse==0.4.4
+wheel==0.43.0
