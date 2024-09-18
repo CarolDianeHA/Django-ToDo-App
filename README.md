@@ -48,7 +48,7 @@ The primary objective of developing this application is to create a comprehensiv
 ## Code overview
 The project was developed using Python and the Django framework, leveraging SQLite as the database. The front-end was crafted with HTML, enhanced by Bootstrap and CSS for styling. JavaScript was employed to enable the functionality for editing tasks.
 
-## File Contributions
+### File Contributions
 
 |File|Content|
 |:---|:------|
@@ -59,7 +59,7 @@ The project was developed using Python and the Django framework, leveraging SQLi
 |`templates/`|Designed HTML templates for the different pages.|
 |`static/`|Added CSS file for styling and interactivity.|
 
-## Application File Structure
+### Application File Structure
 
 The VSCode File Tree Generator shows the following file structure:
 
@@ -181,7 +181,6 @@ Windows:
 ```
 py -m venv env
 ```
-
 Unix/MacOS:
 ```
 python3 -m venv env
@@ -202,6 +201,7 @@ Windows:
 ```
 env\Script\activate.bat
 ```
+
 Linux/MacOS:
 ```
 source env/bin/activate
