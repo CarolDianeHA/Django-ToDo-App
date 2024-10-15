@@ -174,7 +174,7 @@ In the mobile version, users have the same functionalities as in the web version
 
 ## Application Demo Video
 
-[Visit YouTube Link here!!](https://youtu.be/aTuUTbH0rmM)
+[Visit YouTube Link here!!](https://www.youtube.com/watch?v=B73zh4wHkRw)
 
 ## Installation
 
